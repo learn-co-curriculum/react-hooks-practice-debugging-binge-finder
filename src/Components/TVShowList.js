@@ -8,7 +8,7 @@ class TVShowList extends Component {
     if (!!this.props.searchTerm){
       return this.props.shows.map((s) => {
         if (s.name.toLowerCase().includes(this.props.searchTerm)){
-          return (<TVShow show={s} key={s.id}/>)
+          return (<TVShow show={s} key={s.id} selectShow={this.props.selectShow}/> )
         }
       })
     }
@@ -20,8 +20,8 @@ class TVShowList extends Component {
 
   render() {
     return (
-      <div className="tvShowList">
-        <Grid rows={2}>
+      <div className="TVShowList">
+        <Grid>
           {this.mapAllShows()}
         </Grid>
       </div>
