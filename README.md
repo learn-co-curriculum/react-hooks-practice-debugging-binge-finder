@@ -1,4 +1,4 @@
-# README
+# Binge-Finder (Debugging-Lab)
 
 ## Instructions
 
