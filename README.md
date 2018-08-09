@@ -1,4 +1,4 @@
-# Binge-Finder (Debugging-Lab)
+# Binge-Finder
 
 ## Instructions
 
