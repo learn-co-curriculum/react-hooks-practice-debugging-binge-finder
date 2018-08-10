@@ -17,11 +17,6 @@ You now have a project with an unknown amount of bugs and your client is coming 
 
 ## Deliverables
 
-This is your end goal:
-
-![Jest watch mode](./public/Debugging-Project-Demo.gif)
-
-
 1. A user should be able to click on a show and have the details show up on the left.
 2. A user should be able to search for a show.
 3. A user should be able to filter the list of shows by their rating.
@@ -34,3 +29,5 @@ LAZY LOADING!! Your initial fetch only grabbed the most popular 240 shows on the
 
 TIP change your fetch to reflect the page numbers example:
 http://api.tvmaze.com/shows?page=1
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/Binge-Finder-Debugging-Lab'>Binge Finder Debugging Lab</a> on Learn.co and start learning to code for free.</p>
