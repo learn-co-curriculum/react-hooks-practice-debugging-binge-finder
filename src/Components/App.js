@@ -40,7 +40,7 @@ function App() {
   let displayShows = shows;
   if (filterByRating) {
     displayShows = displayShows.filter((s) => {
-      s.rating.average >= filterByRating;
+      return s.rating.average >= filterByRating;
     });
   }
 
@@ -56,7 +56,7 @@ function App() {
           {!!selectedShow ? (
             <SelectedShowContainer
               selectedShow={selectedShow}
-              allEpisodes={episodes}
+              episodes={episodes}
             />
           ) : (
             <div />
