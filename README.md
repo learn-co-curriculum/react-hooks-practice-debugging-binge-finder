@@ -38,6 +38,4 @@ gets to the bottom of the screen.
 
 **TIP**: change your fetch to reflect the page numbers example:
 
-http://api.tvmaze.com/shows?page=1
-
-<p class='util--hide'>View <a href='https://learn.co/lessons/Binge-Finder-Debugging-Lab'>Binge Finder Debugging Lab</a> on Learn.co and start learning to code for free.</p>
+[http://api.tvmaze.com/shows?page=1](http://api.tvmaze.com/shows?page=1)
