@@ -6,7 +6,7 @@ function SelectedShowContainer(props) {
 
   function mapSeasons() {
     if (!!props.episodes) {
-      let seasons = props.episodes.map((e) => e.season).unique();
+      let seasons = [...Set(props.episodes.map((e) => e.season))];
 
       return seasons.map((s) => {
         return (
@@ -49,13 +49,3 @@ function SelectedShowContainer(props) {
 }
 
 export SelectedShowContainer;
-
-Array.prototype.unique = function () {
-  const arr = [];
-  for (let i = 0; i < this.length; i++) {
-    if (!arr.includes(this[i])) {
-      arr.push(this[i]);
-    }
-  }
-  return arr;
-};
