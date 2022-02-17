@@ -10,7 +10,9 @@ leave you with a little gift before his departure...
 You now have a project with an unknown amount of bugs and your client is coming
 in for a presentation tonight _insert panicked emoji_ Review the code that your
 team has written to discover and kill all the bugs in your application for a
-smooth presentation. Finish off with a round of celebratory drinks!
+smooth presentation. This is an important client, so you'll want to make sure
+all the listed deliverables are working, and that all errors and console
+warnings have been cleared. Finish off with a round of celebratory drinks!
 
 ## Setup
 
