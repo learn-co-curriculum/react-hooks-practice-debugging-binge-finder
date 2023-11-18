@@ -4,6 +4,7 @@ import Adapter from "../Adapter";
 import TVShowList from "./TVShowList";
 import Nav from "./Nav";
 import SelectedShowContainer from "./SelectedShowContainer";
+import { lazy, Suspense } from "react";
 
 function App() {
   const [shows, setShows] = useState([]);
@@ -13,7 +14,11 @@ function App() {
   const [filterByRating, setFilterByRating] = useState("");
 
   useEffect(() => {
-    Adapter.getShows().then((shows) => setShows(shows));
+    const fetchData = async () => {
+      const showItems = await Adapter.getShows();
+      setShows([...showItems]);
+    };
+    fetchData();
   }, []);
 
   useEffect(() => {
@@ -25,6 +30,7 @@ function App() {
   }
 
   function handleFilter(e) {
+    console.log(e.target.value);
     e.target.value === "No Filter"
       ? setFilterByRating("")
       : setFilterByRating(e.target.value);
@@ -40,10 +46,15 @@ function App() {
   let displayShows = shows;
   if (filterByRating) {
     displayShows = displayShows.filter((s) => {
-      s.rating.average >= filterByRating;
+      return parseInt(s.rating.average) >= parseInt(filterByRating);
     });
   }
 
+  const temp = lazy(() => {
+    console.log("HI");
+  });
+
+  console.log(temp);
   return (
     <div>
       <Nav
@@ -56,7 +67,7 @@ function App() {
           {!!selectedShow ? (
             <SelectedShowContainer
               selectedShow={selectedShow}
-              allEpisodes={episodes}
+              episodes={episodes}
             />
           ) : (
             <div />

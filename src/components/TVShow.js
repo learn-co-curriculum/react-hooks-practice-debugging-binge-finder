@@ -1,12 +1,19 @@
 import React from "react";
 
-function tvShow() {
+function TVShow(props) {
+  function handleSelectShow() {
+    props.selectShow(props.show);
+  }
   return (
     <div>
       <br />
-      <img src={props.image.medium} onClick={props.selectShow} alt="" />
+      <img
+        src={props.show.image.medium}
+        onClick={handleSelectShow}
+        alt="hello"
+      />
     </div>
   );
 }
 
-export default tvShow;
+export default TVShow;
