@@ -50,11 +50,6 @@ function App() {
     });
   }
 
-  const temp = lazy(() => {
-    console.log("HI");
-  });
-
-  console.log(temp);
   return (
     <div>
       <Nav
